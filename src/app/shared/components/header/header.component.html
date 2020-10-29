@@ -1,20 +1,78 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">craigslist</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<header class="fxg-header">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/search-results']">Search results</a>
-                </li>
-            </ul>
+    <div class="cq-dd-paragraph">
+        <div class="global_navigation">
+            <!-- GLOBAL NAV START -->
+
+            <nav class="fxg-nav">
+                <div class="fxg-wrapper">
+
+                    <a
+                        class="fxg-header__logo_wrapper fxg-keyboard"
+                        routerLink="/"
+                        target="_self"
+                        data-analytics="HDR|Logo"
+                        onclick="FDX.DTM.pushLinkInfo(this)"
+                        aria-label="FedEx Logo">
+                        
+                        <span class="fxg-mouse" tabindex="-1">
+                            <img src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png" class="fxg-header__logo" alt="FedEx Logo">
+                        </span>
+                    
+                    </a>
+
+                    <ul class="fxg-dropdown fxg-global-nav">
+                        <div class="dropdown section">
+                            <!-- DROPDOWN START -->
+
+                            <li class="fxg-dropdown__item">
+
+                                <a
+                                    routerLink="/"
+                                    aria-label="Open Shipping Menu"
+                                    class="fxg-link fxg-dropdown-js fxg-keyboard"
+                                    data-analytics="hdr|tab|1|Shipping"
+                                    onclick="FDX.DTM.pushLinkInfo(this)"
+                                    target="_self">
+                                    
+                                    <span class="fxg-mouse" tabindex="-1">Home</span>
+
+                                </a>
+                            </li>
+
+                            <!-- DROPDOWN END -->
+                        </div>
+
+                        <div class="dropdown section">
+                            <!-- DROPDOWN START -->
+
+                            <li class="fxg-dropdown__item">
+
+                                <a
+                                    routerLink="/search-results"
+                                    aria-label="Open Tracking Menu"
+                                    class="fxg-link fxg-dropdown-js fxg-keyboard"
+                                    data-analytics="hdr|tab|2|Tracking"
+                                    onclick="FDX.DTM.pushLinkInfo(this)"
+                                    target="_self">
+                                    
+                                    <span class="fxg-mouse" tabindex="-1">Search Results</span>
+                                
+                                </a>
+
+                            </li>
+
+                            <!-- DROPDOWN END -->
+                        </div>
+
+                    </ul>
+
+                </div>
+            </nav>
+            <!-- GLOBAL NAV END -->
         </div>
     </div>
-</nav>
+
+</header>
+
+<!-- HEADER END -->
