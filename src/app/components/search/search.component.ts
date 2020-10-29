@@ -1,34 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
-declare var jQuery: any;
+// Services
+import { SearchService } from "../../shared/services/search/search.service";
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
   searchForm: FormGroup;
 
-  searchPath = '/search/sss?query=cars&sort=rel';
-
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private searchService: SearchService,
+    private router: Router
+  ) {
     this.searchForm = this.fb.group({
       searchTerm: ['', Validators.required]
     })
   }
 
-  ngOnInit(): void {
-  }
-
   submitSearch() {
-    const searchTerm = encodeURI(this.searchForm.controls['searchTerm'].value);
-
-    jQuery.get(`/search/sss?query=${searchTerm}&sort=rel`, ( data ) => {
-      console.log( data );
-    });
+    this.searchService.performForm(encodeURI(this.searchForm.controls['searchTerm'].value))
+      .subscribe(() => this.router.navigate(['/search-results']));
   }
 
 }

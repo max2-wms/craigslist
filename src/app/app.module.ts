@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 // Internal Modules
 import { AppRoutingModule } from './app-routing.module';
 
+// Services
+import { SearchService } from "./shared/services/search/search.service";
+
 // Components
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
@@ -26,7 +29,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,8 @@
+{
+  "/search/sss/*": {
+    "target": "https://toronto.craigslist.org",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
