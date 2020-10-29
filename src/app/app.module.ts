@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+// Internal Modules
 import { AppRoutingModule } from './app-routing.module';
+
+// Components
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
@@ -18,7 +22,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
